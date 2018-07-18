@@ -7,8 +7,8 @@ LDIR=/usr/local/lib
 
 LIBS=-ljsonfortran
 
-alephToJSON: main.f aleph14_vpa.f90
-	$(CC) -o $@ num_const.f90 aleph14_vpa.f90 main.f ${CFLAGS} ${LIBS}
+alephToJSON: main.f aleph14_vpa.f90 aleph14_v.f90 aleph14_a.f90
+	$(CC) -o $@ num_const.f90 aleph14_vpa.f90 aleph14_v.f90 aleph14_a.f90 main.f ${CFLAGS} ${LIBS}
 
 clean:
 	rm alephToJSON
